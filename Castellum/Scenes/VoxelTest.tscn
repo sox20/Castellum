@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Sprites/noise_distorted.png" type="Image" id=1]
+[ext_resource path="res://Assets/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Materials/grass.tres" type="Material" id=3]
+[ext_resource path="res://Materials/dirt.tres" type="Material" id=4]
 
 [sub_resource type="VoxelStreamImage" id=1]
 image = ExtResource( 1 )
@@ -26,11 +29,14 @@ voxels/1 = SubResource( 3 )
 
 [node name="Spatial" type="Spatial"]
 
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 75, 0 )
-
 [node name="VoxelTerrain" type="VoxelTerrain" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0663719, 0.0965195, -0.0152512 )
 stream = SubResource( 1 )
 voxel_library = SubResource( 4 )
-viewer_path = NodePath("../Camera")
+view_distance = 256
+viewer_path = NodePath("../Player")
+material/0 = ExtResource( 3 )
+material/1 = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 75, 0 )
