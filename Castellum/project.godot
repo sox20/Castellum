@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Castellum"
-config/icon="res://icon.png"
+config/icon="res://Sprites/icon.png"
 
 [rendering]
 
