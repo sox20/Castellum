@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/noise_distorted.png-df9c9d9187f575f5a5d7baf0f3d577f3.image"
+
+[deps]
+
+source_file="res://Sprites/noise_distorted.png"
+dest_files=[ "res://.import/noise_distorted.png-df9c9d9187f575f5a5d7baf0f3d577f3.image" ]
+
+[params]
+
