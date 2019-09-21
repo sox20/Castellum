@@ -83,7 +83,7 @@ func process_movement(delta):
 	
 func _input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-		rotation_help.rotate_y(deg2rad(event.relative.y * mouse_sensitivity))
+		rotation_help.rotate_x(deg2rad(event.relative.y * mouse_sensitivity * -1))
 		self.rotate_y(deg2rad(event.relative.x * mouse_sensitivity * -1))
 		
 		var camera_rot = rotation_help.rotation_degrees
