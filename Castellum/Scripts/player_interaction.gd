@@ -4,6 +4,8 @@ var _terrain = null
 var _terrain_tool = null
 var _player = null
 var _ray = null
+var _selected_block = 1
+var _max_inv_size = 1
 
 func _ready():
 	_player = get_parent()
@@ -16,13 +18,19 @@ func _physics_process(delta):
 	if _terrain == null: #Stops function if terrain is not present
 		return
 	
+	if Input.is_action_just_pressed("block_switch"):
+		if _selected_block >= _max_inv_size:
+			_selected_block = 0
+		else:
+			_selected_block = _selected_block + 1
+		print("BLOCK SET TO: ", _selected_block)
+
 	if Input.is_action_just_pressed("block_place"):
 		print()
-		var selectedBlock = 1
 		var pos = get_selected_pos()
 		if pos != null:
-			print("block ID: ", selectedBlock," placed at ", pos)
-			set_voxel(pos, selectedBlock)
+			print("block ID: ", _selected_block," placed at ", pos)
+			set_voxel(pos, _selected_block)
 
 func set_voxel(position, type):
 	_terrain_tool.channel = VoxelBuffer.CHANNEL_TYPE
