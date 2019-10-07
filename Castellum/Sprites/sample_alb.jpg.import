@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/sample_alb.jpg-d37aaa493318a31c5e658e3e221754a2.image"
+
+[deps]
+
+source_file="res://Sprites/sample_alb.jpg"
+dest_files=[ "res://.import/sample_alb.jpg-d37aaa493318a31c5e658e3e221754a2.image" ]
+
+[params]
+
