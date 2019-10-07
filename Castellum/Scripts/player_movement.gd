@@ -16,6 +16,7 @@ var mouse_sensitivity = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	camera = $rotation_help/Camera
 	rotation_help = $rotation_help
 	
