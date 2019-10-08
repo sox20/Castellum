@@ -5,7 +5,7 @@ var _terrain_tool = null
 var _player = null
 var _ray = null
 var _selected_block = 1
-var _max_inv_size = 1
+var _max_inv_size = 2
 
 func _ready():
 	_player = get_parent()

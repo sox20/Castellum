@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/sample_sand_alb.png-415b6ca1c6cd2a245c5255ecdb890052.image"
+
+[deps]
+
+source_file="res://Sprites/sample_sand_alb.png"
+dest_files=[ "res://.import/sample_sand_alb.png-415b6ca1c6cd2a245c5255ecdb890052.image" ]
+
+[params]
+
