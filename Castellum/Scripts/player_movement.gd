@@ -64,7 +64,6 @@ func process_movement(delta):
 	
 	velocity.y += delta * GRAVITY
 	
-	
 	var hvel = velocity
 	hvel.y = 0
 	
@@ -88,5 +87,5 @@ func _input(event):
 		self.rotate_y(deg2rad(event.relative.x * mouse_sensitivity * -1))
 		
 		var camera_rot = rotation_help.rotation_degrees
-		camera_rot.x = clamp(camera_rot.x, -70, 70)
+		camera_rot.x = clamp(camera_rot.x, -89, 89)
 		rotation_help.rotation_degrees = camera_rot
