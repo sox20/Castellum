@@ -29,13 +29,14 @@ func _physics_process(delta):
 		print()
 		var pos = get_selected_pos()
 		if pos != null:
+			pos += _ray.get_collision_normal()*0.5
 			print("block ID: ", _selected_block," placed at ", pos)
 			set_voxel(pos, _selected_block)
 	if Input.is_action_just_pressed("block_remove"):
 		print()
-		var pos = get_selected_pos()
+		var pos: Vector3 = get_selected_pos()
 		if pos != null:
-			pos += _ray.rotation.normalized()
+			pos -= _ray.get_collision_normal()*0.5
 			print("block ID: ", 0," placed at ", pos)
 			set_voxel(pos, 0)
 
