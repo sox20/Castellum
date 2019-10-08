@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/sample_sand_nor.png-e7304066c22296e7fe9c3719e8b138a5.image"
+
+[deps]
+
+source_file="res://Sprites/sample_sand_nor.png"
+dest_files=[ "res://.import/sample_sand_nor.png-e7304066c22296e7fe9c3719e8b138a5.image" ]
+
+[params]
+
