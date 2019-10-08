@@ -31,6 +31,13 @@ func _physics_process(delta):
 		if pos != null:
 			print("block ID: ", _selected_block," placed at ", pos)
 			set_voxel(pos, _selected_block)
+	if Input.is_action_just_pressed("block_remove"):
+		print()
+		var pos = get_selected_pos()
+		if pos != null:
+			pos += _ray.rotation.normalized()
+			print("block ID: ", 0," placed at ", pos)
+			set_voxel(pos, 0)
 
 func set_voxel(position, type):
 	_terrain_tool.channel = VoxelBuffer.CHANNEL_TYPE
